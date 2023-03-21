@@ -4,14 +4,19 @@
 }
 
 body {
-    background-color: hsl(217, 28%, 15%);
+    background-color: hsl(218, 28%, 13%);
 
     width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
 /* 
     font-family: 'Open Sans', sans-serif;
     font-family: 'Raleway', sans-serif; */
+}
+
+.nav,
+.header,
+main {
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 /* Navigation Styling */
@@ -26,7 +31,7 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-.nav img {
+.logo {
     width: 100px;
 }
 
@@ -128,19 +133,212 @@ body {
     text-align: center;
 }
 
+/* Flex Styling */
+
+.flex {
+    width: 80%;
+    margin: 10rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.flex img {
+    width: 100%;
+}
+
+.flex div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.external_link {
+    color:hsl(176, 68%, 64%);
+    text-underline-offset: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.external_link img {
+    width: 14px;
+}
+
+.external_link:hover {
+    color: hsla(0, 0%, 100%, 100%);
+}
+
+/* Profile Styling */
+.quotes {
+    width: 80%;
+    margin: 10rem auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+
+    position: relative;
+}
+
+.quote-icon {
+    width: 50px;
+    position: absolute;
+    top: -35px;
+    left: -5px;
+    z-index: -1;
+}
+
+.card {
+    background-color: hsl(219, 30%, 18%);
+    border-radius: 5px;
+    padding: 2rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-img {
+    width: 25px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.profile-info h3 {
+    font-size: 12px;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 100%);
+}
+
+.profile-info p {
+    font-size: 8px;
+    font-weight: 400;
+    color:hsla(0, 0%, 100%, 50%);
+}
+
 /* Footer Styling */
+.footer {
+    width: 100%;
+    position: relative;
+    background-color: hsl(216, 53%, 9%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer .logo {
+    padding-top: 10rem;
+    padding-left: 10%;
+}
+
+.footer-content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.icon {
+    width: 14px;
+}
+
+.location {
+    width: 300px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.links {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.links div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact p,
+.links div p {
+    color: hsla(0, 0%, 100%, 50%);
+}
+
+.links div p:hover {
+    color: hsla(0, 0%, 100%, 100%);
+    cursor: pointer;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-media img {
+    width: 14px;
+    height: 14px;
+
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 5px;
+
+    cursor: pointer;
+}
+
 .attribution { 
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 1rem;
+
     font-size: 11px; 
     text-align: center; 
+    color: white;
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: blue;
 }
 
 @media screen and (max-width: 800px) {
     .header {
         width: 80%;
+    }
+
+    .heading__1 {
+        font-size: 20px;
     }
 
     .grid {
@@ -149,5 +347,35 @@ body {
 
     .grid_item {
         width: 100%;
+    }
+
+    .flex {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    .quotes {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+
+    .quote-icon {
+        width: 25px;
+        top: -20px;
+        left: 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .social-media {
+        width: 100%;
+        justify-content: center;
     }
 }
